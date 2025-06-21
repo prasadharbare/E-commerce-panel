@@ -1,0 +1,15 @@
+<table>
+    <tr *ngFor="let p of products">
+      <td>{{ p.sku }}</td>
+      <td>{{ p.name }}</td>
+      <td>{{ p.price }}</td>
+      <td>
+        <img *ngFor="let i of p.images" [src]="i.url" width="50">
+      </td>
+      <td>
+        <button>Edit</button>
+        <button (click)="delete(p.id)">Delete</button>
+      </td>
+    </tr>
+  </table>
+  

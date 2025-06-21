@@ -1,0 +1,8 @@
+<form [formGroup]="productForm" (ngSubmit)="submit()">
+    <input formControlName="sku" placeholder="SKU">
+    <input formControlName="name" placeholder="Name">
+    <input formControlName="price" type="number" placeholder="Price">
+    <input type="file" multiple (change)="onImageUpload($event)">
+    <button type="submit">Save</button>
+</form>
+  
